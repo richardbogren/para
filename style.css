@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    width: 100vw;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column !important;
+    flex-wrap: wrap;
+   font-family: "acumin-variable", sans-serif;
+    font-variation-settings: "wght"500, "wdth"115;
+    overflow-x: hidden;
+    transition: all 500ms;
+    transition-timing-function: ease
+} 
+
+*{
+    z-index: 2
+}
+
+
+#scene {
+    width: 100vw;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(1) !important;
+    position: relative;
+    z-index: 1
+
+}
+
+.scene_item {
+    position: absolute !important;
+    width: 100vw;
+    height: 100%;
+}
+
+.hero {
+    width: 100vw;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12vw;
+}

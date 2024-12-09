@@ -166,7 +166,7 @@ if (mobileCheck == false) {
 
         var scene1 = document.getElementById("scene");
         var parallaxInstance1 = new Parallax(scene1, {
-            relativeInput: true,
+            relativeInput: false,
             precision: 0.1,
             limitY: false,
             limitX: false,

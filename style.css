@@ -22,6 +22,7 @@ body {
 
 button {
     transform: scale(3);
+    color: red;
 }
 
 #scene {

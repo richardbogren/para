@@ -165,3 +165,19 @@ if (mobileCheck == false) {
         DeviceOrientationEvent.requestPermission();
     });
 }
+
+let orientArr;
+
+function handleOrientation(event) {
+    const absolute = event.absolute;
+    const alpha = event.alpha;
+    const beta = event.beta;
+    const gamma = event.gamma;
+
+    orientArr = [absolute, alpha, beta, gamma];
+
+    console.log(orientArr);
+    // Do stuff with the new orientation data
+}
+
+window.addEventListener("deviceorientation", handleOrientation, true);

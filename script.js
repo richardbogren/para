@@ -164,6 +164,16 @@ if (mobileCheck == false) {
     $("#button").click(function (e) {
         DeviceOrientationEvent.requestPermission();
     });
+
+    var scene1 = document.getElementById("scene");
+    var parallaxInstance1 = new Parallax(scene1, {
+        relativeInput: true,
+        precision: 0.1,
+        limitY: false,
+        limitX: false,
+        invertX: false,
+        invertY: false
+    });
 }
 
 let orientArr;

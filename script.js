@@ -176,7 +176,9 @@ function handleOrientation(event) {
 
     orientArr = [absolute, alpha, beta, gamma];
 
-    $("#orientP").html(orientArr);
+    $("#orientA").html(orientArr[1]);
+    $("#orientB").html(orientArr[2]);
+    $("#orientG").html(orientArr[3]);
     // Do stuff with the new orientation data
 }
 

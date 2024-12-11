@@ -23,8 +23,8 @@ body {
 
 button {
     transform: scale(3);
-    color: red;
-    margin: 0 auto;
+    color: blue;
+    margin: 10vw auto;
 }
 
 #scene {

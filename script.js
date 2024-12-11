@@ -162,7 +162,7 @@ if (mobileCheck == false) {
     //});
 
     $("#button").click(function (e) {
-        DeviceOrientationEvent.requestPermission().then(() => {
+        /* DeviceOrientationEvent.requestPermission().then(() => {
             var scene = document.getElementById("scene");
             var parallaxInstance1 = new Parallax(scene1, {
                 relativeInput: false,
@@ -172,7 +172,28 @@ if (mobileCheck == false) {
                 invertX: false,
                 invertY: false
             });
-        });
+        });*/
+
+        var dot = $("#sItem25");
+        var scene = document.getElementById("scene");
+        if (typeof DeviceOrientationEvent.requestPermission === "function") {
+            document.addEventListener("click", () => {
+                if (location.protocol != "https:") {
+                    location.href = "https:" + window.location.href.substring(window.location.protocol.length);
+                }
+                DeviceOrientationEvent.requestPermission()
+                    .then((response) => {
+                        if (response == "granted") {
+                            window.addEventListener("devicemotion", (e) => {
+                                dot.attr("data-depth", "-5");
+
+                                var parallaxInstance = new Parallax(scene);
+                            });
+                        }
+                    })
+                    .catch(console.error);
+            });
+        }
     });
 }
 

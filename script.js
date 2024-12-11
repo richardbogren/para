@@ -161,7 +161,7 @@ if (mobileCheck == false) {
     //    invertY: false
     //});
 
-    $("#button").css("color", "red");
+    $("#button").css("color", "hotpink");
 
     $("#button").click(function (e) {
         /* DeviceOrientationEvent.requestPermission().then(() => {
@@ -187,7 +187,7 @@ if (mobileCheck == false) {
                     .then((response) => {
                         if (response == "granted") {
                             window.addEventListener("devicemotion", (e) => {
-                                dot.attr("data-depth", "1");
+                                dot.attr("data-depth", "-20");
 
                                 var parallaxInstance = new Parallax(scene, {
                                     relativeInput: false,

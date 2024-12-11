@@ -195,7 +195,6 @@ if (mobileCheck == false) {
                                     invertX: true,
                                     invertY: false
                                 });
-                                alert(parallaxInstance);
                             });
                         }
                     })

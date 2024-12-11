@@ -161,9 +161,7 @@ if (mobileCheck == false) {
     //    invertY: false
     //});
 
-    $("#button").css({
-        color: "green"
-    });
+    $("#button").css("color", "green");
 
     $("#button").click(function (e) {
         /* DeviceOrientationEvent.requestPermission().then(() => {

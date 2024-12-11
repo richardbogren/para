@@ -23,7 +23,7 @@ body {
 
 button {
     transform: scale(3);
-    color: purple;
+    color: gray;
     margin: 10vw auto;
 }
 

@@ -161,6 +161,10 @@ if (mobileCheck == false) {
     //    invertY: false
     //});
 
+    $("#button").css({
+        color: "green"
+    });
+
     $("#button").click(function (e) {
         /* DeviceOrientationEvent.requestPermission().then(() => {
             var scene = document.getElementById("scene");
@@ -192,8 +196,9 @@ if (mobileCheck == false) {
                                     precision: 0.1,
                                     limitY: false,
                                     limitX: false,
-                                    invertX: true,
-                                    invertY: false
+                                    invertX: false,
+                                    invertY: false,
+                                    calibrateY: false
                                 });
                             });
                         }

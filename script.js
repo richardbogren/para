@@ -192,4 +192,6 @@ function handleOrientation(event) {
     // Do stuff with the new orientation data
 }
 
-window.addEventListener("deviceorientation", handleOrientation, true);
+window.addEventListener("deviceorientation", (event) => {
+    console.log(`${event.alpha} : ${event.beta} : ${event.gamma}`);
+});

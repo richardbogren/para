@@ -189,10 +189,10 @@ if (mobileCheck == false) {
 
                                 var parallaxInstance = new Parallax(scene, {
                                     relativeInput: false,
-                                    precision: 1,
+                                    precision: 0.1,
                                     limitY: false,
                                     limitX: false,
-                                    invertX: false,
+                                    invertX: true,
                                     invertY: false
                                 });
                             });

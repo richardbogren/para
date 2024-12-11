@@ -164,6 +164,8 @@ if (mobileCheck == false) {
     $("#button").click(function (e) {
         DeviceOrientationEvent.requestPermission();
 
+        enable();
+
         var scene1 = document.getElementById("scene");
         var parallaxInstance1 = new Parallax(scene1, {
             relativeInput: false,

@@ -176,18 +176,25 @@ if (mobileCheck == false) {
 
         var dot = $("#sItem25");
         var scene = document.getElementById("scene");
-        if (typeof DeviceOrientationEvent.requestPermission === "function") {
+        if (typeof DeviceMotionEvent.requestPermission === "function") {
             document.addEventListener("click", () => {
                 if (location.protocol != "https:") {
                     location.href = "https:" + window.location.href.substring(window.location.protocol.length);
                 }
-                DeviceOrientationEvent.requestPermission()
+                DeviceMotionEvent.requestPermission()
                     .then((response) => {
                         if (response == "granted") {
                             window.addEventListener("devicemotion", (e) => {
                                 dot.attr("data-depth", "-5");
 
-                                var parallaxInstance = new Parallax(scene);
+                                var parallaxInstance = new Parallax(scene, {
+                                    relativeInput: false,
+                                    precision: 1,
+                                    limitY: false,
+                                    limitX: false,
+                                    invertX: false,
+                                    invertY: false
+                                });
                             });
                         }
                     })

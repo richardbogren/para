@@ -191,7 +191,7 @@ if (mobileCheck == false) {
 
                                 var parallaxInstance = new Parallax(scene, {
                                     relativeInput: false,
-                                    precision: 0.1,
+                                    precision: 1,
                                     limitY: false,
                                     limitX: false,
                                     invertX: false,
